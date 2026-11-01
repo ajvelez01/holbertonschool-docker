@@ -1,0 +1,4 @@
+step,instruction,image,status,reason
+1,FROM alpine,mycustomimage:v2,CACHED,base image unchanged
+2,"RUN apk add --no-cache curl wget",mycustomimage:v2,REBUILT,instruction modified
+3,"COPY message.txt /message.txt",mycustomimage:v2,REBUILT,previous layer changed
